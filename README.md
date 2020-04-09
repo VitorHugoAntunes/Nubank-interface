@@ -2,8 +2,6 @@
   <h1> Nubank interface </h1>
 </div>
 
-<hr>
-
 <div align="center">
 	<img align="center" src="https://github.com/VitorHugoAntunes/Nubank-interface/blob/master/src/assets/gif/interfaceNubank.gif" alt="interface"/>
 </div>
