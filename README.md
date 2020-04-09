@@ -1,4 +1,4 @@
-# Nubank interface
+<center> <h1> Nubank interface </h1> </center>
 
 <div align="center">
 	<img align="center" src="https://github.com/VitorHugoAntunes/Nubank-interface/blob/master/src/assets/gif/interfaceNubank.gif" alt="interface"/>
