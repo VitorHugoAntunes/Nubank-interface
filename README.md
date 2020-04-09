@@ -3,7 +3,9 @@
 <div align="center">
 	<img align="center" src="https://github.com/VitorHugoAntunes/Nubank-interface/blob/master/src/assets/gif/interfaceNubank.gif" alt="interface"/>
 </div>
+
 <hr>
+
 #### Recreating the main animation of the Nubank app using React Native <img src="https://github.com/VitorHugoAntunes/Nubank-interface/blob/master/src/assets/react-native.png" alt="react-native" height="18">.
 
 <hr>
