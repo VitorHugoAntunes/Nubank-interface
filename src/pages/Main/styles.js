@@ -1,17 +1,34 @@
 import { Animated } from 'react-native';
 import styled from 'styled-components/native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+
+/**
+ * Importando o Animated da lib react native
+ * Importando o styled dos componentes de estilo
+ * Importando da lib react native iphone x helper o getStatusBarHeight para pegar informações da altura da barra de notificações (também funciona para alguns celulares android)
+ */
 
 export const Container = styled.View`
   flex: 1;
   background: #8b10ae;
   justify-content: center;
+  padding-top: ${getStatusBarHeight()}px;
 `;
+
+/**
+ * Estilizando o Container principal
+ * Adicionando padding top com a medida da altura da barra de notificações
+ */
 
 export const Content = styled.View`
   flex-1;
   max-height: 500px;
   z-index: 5;
 `;
+/**
+ * Preenchendo e definindo a altura máxima
+ * Utilizando z index para deixar por cima de todos os outros elementos
+ */
 
 export const Card = styled(Animated.View)`
   flex-1;
@@ -24,7 +41,9 @@ export const Card = styled(Animated.View)`
   right: 0;
   top: 0px;
 `;
-
+/**
+ * Definindo as medidas, posição e margens do Card
+ */
 export const CardHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;

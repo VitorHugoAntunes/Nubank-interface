@@ -1,12 +1,26 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+/**
+ * Importando o React da biblioteca react
+ * Importando o ícone de dentro dos vector icons
+ */
+
 import { Animated } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
+
+/**
+ * Importando o animated do da biblioteca react native para utilizar as animações
+ * Importando o PanGestureHandler para captar o arrastar na tela do usuário e importando o State para guardar o estado da animação
+ */
 
 import Header from '../../components/Header';
 import Tabs from '../../components/Tabs';
 import Menu from '../../components/Menu';
+
+/**
+ * Importando os componentes da tela principal
+ */
 
 import {
   Container,
@@ -19,6 +33,10 @@ import {
   Description,
   Annotation,
 } from './styles';
+
+/**
+ * Importando todas as estilizações dos componentes utilizados na página
+ */
 
 export default function Main() {
   let offset = 0;
@@ -64,6 +82,13 @@ export default function Main() {
   }
 
   return (
+    /**
+     * Container que armazena todos os elementos da tela.
+     */
+
+    /**
+     * Adicionando a variável de animação ao Menu
+     */
     <Container>
       <Header />
 
@@ -72,6 +97,9 @@ export default function Main() {
         <PanGestureHandler
           onGestureEvent={animateEvent}
           onHandlerStateChange={onHandlerStateChanged}
+          /**
+           * Detectar que o estado da animação mudou
+           */
         >
           <Card
             style={{
@@ -85,6 +113,9 @@ export default function Main() {
                 },
               ],
             }}
+            /** Definir quanto o Card pode ser arrastado(input) e definir o que acontece caso ultrapassar essas medidas.
+             * O clamp é utilizado para evitar que acontença mais alguma coisa caso chegue no limite da medida
+             */
           >
             <CardHeader>
               <Icon name="attach-money" size={28} color="#666" />
@@ -103,8 +134,12 @@ export default function Main() {
           </Card>
         </PanGestureHandler>
       </Content>
-
       <Tabs translateY={translateY} />
     </Container>
   );
 }
+
+/**
+ * Todas as informações contidas no cards separadamente
+ * Adicionando a variável de animação nas TABS
+ */

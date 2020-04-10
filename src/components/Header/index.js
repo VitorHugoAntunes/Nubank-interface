@@ -6,6 +6,12 @@ import { Container, Top, Logo, Title } from './styles';
 
 import logo from '../../assets/Nubank_Logo.png';
 
+/**
+ * Importando o React da lib react
+ * Importando o ícone da lib dos vector icons
+ * Importando todas as estilizações dos componentes utilizados na página
+ */
+
 export default function Header() {
   return (
     <Container>
@@ -17,3 +23,10 @@ export default function Header() {
     </Container>
   );
 }
+
+/**
+ * Exportando a função que retorna os elementos do cabeçalho
+ * Criando um container para colocar todo o conteúdo de header
+ * Adicionado a logo e um título
+ * Adicionando o ícone
+ */

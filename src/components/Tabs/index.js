@@ -4,6 +4,11 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, TabsContainer, TabItem, TabText } from './styles';
 
+/**
+ * Importando o React e o ícone de suas respectivas libs
+ * Importando todas as estilizações dos componentes utilizados na página
+ */
+
 export default function Tabs({ translateY }) {
   return (
     <Container
@@ -47,5 +52,10 @@ export default function Tabs({ translateY }) {
         </TabItem>
       </TabsContainer>
     </Container>
+
+    /**
+     * Criando um container para guardar todos os elementos das Tabs
+     * Criando quatro tabs com diferentes ícones (representação de botões dentro do app)
+     */
   );
 }
