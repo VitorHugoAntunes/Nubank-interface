@@ -2,10 +2,18 @@ import { Animated, StyleSheet } from 'react-native';
 
 import styled from 'styled-components/native';
 
+/**
+ * Importando o StyleSheet para que possamos usar a variavel stylesheet e utilizar a propriedade hairLineWidth
+ * Importando o Animated para utilizar nos estilos do container
+ */
+
 export const Container = styled(Animated.ScrollView)`
   margin: 0 30px;
   margin-bottom: 80px;
 `;
+/**
+ * Aplicando o Animated ao estilo do container para que seja possivel alterar os estilos utilizando a variavel translateY
+ */
 
 export const Code = styled.View`
   padding: 10px;

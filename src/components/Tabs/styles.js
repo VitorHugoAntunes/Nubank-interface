@@ -5,6 +5,9 @@ export const Container = styled(Animated.View)`
   height: 100px;
   top: 20px;
 `;
+/**
+ * Aplicando o Animated para o container das Tabs para que seja possivel alterar os estilos utilizando a variavel translateY
+ */
 
 export const TabsContainer = styled.ScrollView.attrs({
   horizontal: true,

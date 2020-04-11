@@ -40,6 +40,9 @@ import {
 
 export default function Main() {
   let offset = 0;
+  /**
+   * Variavel que armazena quantos pixels o usuario arrastou na tela
+   */
   const translateY = new Animated.Value(0);
 
   const animateEvent = Animated.event(
@@ -52,6 +55,10 @@ export default function Main() {
     ],
     { useNativeDriver: true }
   );
+  /**
+   * Utilizando evento de animacao para fazer a alteracao da posicao Y e aplicando para a variavel translateY
+   * Utilizando drivers nativos para a animacao
+   */
 
   function onHandlerStateChanged(event) {
     if (event.nativeEvent.oldState === State.ACTIVE) {
@@ -60,9 +67,15 @@ export default function Main() {
       const { translationY } = event.nativeEvent;
 
       offset += translationY;
+      /**
+       * Armazenando a posicao arrastada para o offset, iniciando com o menu fechado de acordo com o estado
+       */
 
       if (translationY >= 100) {
         opened = true;
+        /**
+         * Se a posicao y for maior que 100 o menu fica aberto
+         */
       } else {
         translateY.setValue(offset);
         translateY.setOffset(0);
@@ -78,6 +91,10 @@ export default function Main() {
         translateY.setOffset(offset);
         translateY.setValue(0);
       });
+      /**
+       * Se o Menu estiver aberto, uma animacao sera atribuida jogando o Card para 392 pixels para baixo da posicao 0, se estiver fechado, volta para 0
+       * Assim atribuindo o valor de 392 ou 0 para o offset, definindo qual posicao o Card deve ficar de acordo com o quanto o usuario arrastou.
+       */
     }
   }
 
@@ -114,7 +131,9 @@ export default function Main() {
               ],
             }}
             /** Definir quanto o Card pode ser arrastado(input) e definir o que acontece caso ultrapassar essas medidas.
-             * O clamp é utilizado para evitar que acontença mais alguma coisa caso chegue no limite da medida
+             * O Card ao ser arrastado para baixo pode ser possivel chegar ate 392 pixels para baixo, onde fica sua posicao limite
+             * Caso seja arrastado acima da posicao 0, ele retorna 50 pixels para sua posicao inicial (0)
+             * O clamp é utilizado para evitar que acontença mais alguma coisa caso chegue no limite das medidas propostas
              */
           >
             <CardHeader>

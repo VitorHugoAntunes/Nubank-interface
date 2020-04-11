@@ -21,6 +21,9 @@ export default function Tabs({ translateY }) {
               extrapolate: 'clamp',
             }),
           },
+          /**
+           * Empurrando as Tabs para baixo, conforme vai arrastando o Card ate a posicao 392, as Tabs sao empurradas 30 pixels para baixo
+           */
         ],
         opacity: translateY.interpolate({
           inputRange: [0, 392],
@@ -28,6 +31,10 @@ export default function Tabs({ translateY }) {
           extrapolate: 'clamp',
         }),
       }}
+      /**
+       * Diminuindo a opacidade das Tabs, quando o Card estiver na posicao 0 as Tabs sao totalmente visiveis,
+       * conforme vai arrastando para baixo ate a posicao 392 as Tabs ficam com opacidade 0.1
+       */
     >
       <TabsContainer>
         <TabItem>

@@ -43,6 +43,7 @@ export const Card = styled(Animated.View)`
 `;
 /**
  * Definindo as medidas, posição e margens do Card
+ * Aplicando o Animated ao estilo do container para que seja possivel alterar os estilos utilizando a variavel translateY
  */
 export const CardHeader = styled.View`
   flex-direction: row;

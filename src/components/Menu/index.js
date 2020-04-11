@@ -14,6 +14,11 @@ import {
   SignOutButtonText,
 } from './styles';
 
+/**
+ * Importando o react, icon e qrcode de suas respectivas pastas/libs
+ * Importando os estilos de todos os componentes utilizados no Menu
+ */
+
 export default function Menu({ translateY }) {
   return (
     <Container
@@ -23,16 +28,21 @@ export default function Menu({ translateY }) {
           outputRange: [0, 1],
         }),
       }}
+      /**
+       * Utilizando a funcao translateY para alterar a opacidade do menu, deixando-o invisivel quando o Card for arrastado 150 pixels para baixo
+       * e ficando invisivel novamente quando o card for arrastado para cima
+       */
     >
       <Code>
         <QRCode
           value="https://nubank.com.br/"
           size={80}
-          fgColor="#8b10ae"
-          bgColor="#fff"
+
+          /**
+           * Adicionado o QRCode com tamanho de 80 pixels e atribuindo o site do nubank ao seu valor
+           */
         />
       </Code>
-
       <Nav>
         <NavItem>
           <Icon name="help-outline" size={20} color="#fff" />
@@ -61,3 +71,7 @@ export default function Menu({ translateY }) {
     </Container>
   );
 }
+/**
+ * Estes sao todos os elementos do container que engloba o menu, nele sao contidos o QRCode e abaixo itens de navegacao
+ * com icones e um botao logo abaixo
+ */
