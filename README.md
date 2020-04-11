@@ -24,9 +24,6 @@ To open the project on your phone run `react-native run-android` on the terminal
 - [React Native QRCode SVG](https://www.npmjs.com/package/react-native-qrcode-svg);
 
 **Note 1: the other dependencies were installed automatically when creating the project, except for some personal ESLint settings.**
-
-</br>
-
 **Note 2: only the files in the src folder were changed in the project, the rest were created automatically when creating the project folder or installing some dependency.**
 
 The interface is not entirely identical, but it was possible to have a very similar result using React Native with native animations, having fluidity in the application.</br>
